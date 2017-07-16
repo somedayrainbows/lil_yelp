@@ -8,7 +8,7 @@ FactoryGirl.define do
     user nil
   end
   factory :user do
-    email "MyString"
-    password_digest "MyString"
+    sequence(:email) { |n| Faker::Internet.email("sample#{n}") }
+    password_digest "some_password"
   end
 end
