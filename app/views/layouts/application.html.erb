@@ -9,6 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"></head>
 
   <body>
+    <% if current_user %>
+      Welcome: <%= current_user.email %> | <%= link_to "Logout", '/logout' %>
+    <% else %>
+      <%= link_to 'Login', '/login' %> | <%= link_to 'Register', '/signup' %>
+    <% end %>
+
+    <% flash.each do |type, message| %>
+            <div class="alert alert-<%= type %>">
+            <button type="button" class="close" data-dismiss='alert'>x</button>
+          <%= sanitize(message) %>
+        <% end %>
+
     <%= yield %>
   </body>
 </html>
