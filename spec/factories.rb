@@ -9,6 +9,6 @@ FactoryGirl.define do
   end
   factory :user do
     sequence(:email) { |n| Faker::Internet.email("sample#{n}") }
-    password_digest "some_password"
+    password "some_password"
   end
 end
