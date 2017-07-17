@@ -11,7 +11,7 @@
   <body>
     <div class="nav">
       <% if current_user %>
-        Welcome: <%= current_user.email %> | <%= link_to "Logout", '/logout' %>
+        Welcome: <%= current_user.email %> | <%= link_to "Logout", '/logout' %> | <%= link_to "Add a Restaurant", new_restaurant_path %>
       <% else %>
         <%= link_to 'Login', '/login' %> | <%= link_to 'Register', '/signup' %>
       <% end %>
