@@ -1,2 +1,10 @@
-<h1>Restaurants#new</h1>
-<p>Find me in app/views/restaurants/new.html.erb</p>
+<h1>Add a Restaurant</h1>
+
+<%= form_for :restaurant, url: '/restaurants' do |f| %>
+  Restaurant Name: <%= f.text_field :name, required: true %><br><br>
+  Restaurant Cuisine: <%= f.text_field :cuisine, required: true %><br><br>
+  Restaurant City: <%= f.text_field :city, required: true %><br><br>
+  Restaurant State: <%= f.text_field :state, required: true %><br><br>
+  Restaurant Zipcode: <%= f.text_field :zip, required: true %><br><br>
+  <%= f.submit "Submit" %>
+<% end %>

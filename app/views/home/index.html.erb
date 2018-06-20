@@ -1,3 +1,11 @@
 <div class="all_restaurants">
   <h1>All Restaurants</h1>
+  <p><% @restaurants.each do |restaurant| %>
+    <%= restaurant.name %><br>
+    <%= restaurant.cuisine %><br>
+    <%= restaurant.city %>, <%= restaurant.state %>, <%= restaurant.zip %>
+    <br><br>
+    <% end %>
+
+  </p>
 </div>

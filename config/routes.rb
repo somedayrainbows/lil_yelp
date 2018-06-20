@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'home/index'
-
-  get 'restaurants/create'
-
   root "home#index"
+  get 'home/index'
+  get 'restaurants/create'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
